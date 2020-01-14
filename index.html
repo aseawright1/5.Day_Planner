@@ -22,7 +22,6 @@
 
     <title>Work Day Scheduler</title>
   </head>
-
   <body>
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
@@ -32,18 +31,18 @@
     <div class="container">
 
       <!-- Timeblocks go here -->
-      <div id="hour"></div>
-      
-      <script type = "text/javascript">
-        var hours = ['9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM'];
+      <div class='hour'></div>
 
-        var hours = document.getElementById("hour");
-        hour.innerHTML = hours;
-      
-      </script>
-
-
+        <script type = "text/javascript">
+          var hoursList = ['9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM'];
+          
+            var hoursDiv = $('.hour');
+            $.each(hoursList, function(i, time) {
+              hoursDiv.append('<div>' + time + '</div>');
+            });
+        </script>
     </div>
+     <!-- end container div  -->
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
