@@ -42,10 +42,12 @@ $(document).ready(function() {
         // create on-click to store note in local storage
         let saveBtn = document.querySelector('.saveBtn');
         saveBtn.addEventListener('click', function(storeNote) {
+            // forEach (var i in hoursList) 
             storeNote.preventDefault();
-            let note = document.getElementsByClassName('textarea')[0].value;
+            let note = document.getElementsByClassName('textarea')[i].value; // i in foreach
             localStorage.setItem('note', note);
             console.log(note);
+
         })
 
     }) // end document ready
